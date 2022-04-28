@@ -1,13 +1,13 @@
-const GRID_SIZE = 21;
+const GRID_SIZE = 17;
 
 export function randomGridPosition() {
   let position = Math.floor(Math.random() * GRID_SIZE) + 1;
 
   if (
     position === 1 ||
-    position === 21 ||
+    position === 17 ||
     position === -1 ||
-    position === -21
+    position === -17
   ) {
     randomGridPosition();
   } else {
