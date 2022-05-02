@@ -19,10 +19,21 @@ export function randomGridPosition() {
 }
 
 export function outsideGrid(position) {
-  return (
-    position.x < 1 ||
-    position.x > GRID_SIZE ||
-    position.y < 1 ||
-    position.y > GRID_SIZE
-  );
+  if (position.x < 1) {
+    return { x: GRID_SIZE, y: position.y };
+  } else if (position.x > GRID_SIZE) {
+    return { x: 1, y: position.y };
+  } else if (position.y < 1) {
+    return { x: position.x, y: GRID_SIZE };
+  } else if (position.y > GRID_SIZE) {
+    return { x: position.x, y: 1 };
+  } else {
+    return null;
+  }
+  // return (
+  //   position.x < 1 ||
+  //   position.x > GRID_SIZE ||
+  //   position.y < 1 ||
+  //   position.y > GRID_SIZE
+  // );
 }

@@ -24,9 +24,32 @@
         grid-template-columns: repeat(17, 1fr);
       }
 
-      .snake {
+      .snake-head {
         background-image: url("/SnakeAnders.png");
         background-size: cover;
+      }
+
+      .snake-body {
+        background-image: url(/snakeBody.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .snake-body2 {
+        background-image: url(/snakeBody2.png);
+        background-size: cover;
+      }
+
+      .snake-tail {
+        background-image: url(/snakeTail.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .rotate-right {
+        transform: rotate(90deg);
       }
 
       .food {
